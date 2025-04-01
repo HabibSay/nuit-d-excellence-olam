@@ -5,18 +5,36 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'GilroyRegular';
+    src: url("./font/Gilroy-Regular.ttf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GilroyLight';
+    src: url('./font/Gilroy-Light.ttf');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GilroyBold';
+    src: url('./font/Gilroy-Bold.ttf');
+    font-display: swap;
+}
+
 html, body {
     height: 100%;
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'GilroyBold', 'Open Sans', 'Helvetica Neue', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     padding: 1rem;
-    background-color: #f5f5f5;
+    background-color: #2E2E2E;
     line-height: 1.5;
 }
 
@@ -90,22 +108,22 @@ h1 {
         font-size: 2rem;
         margin-bottom: 2rem;
     }
-    
+
     .container {
         padding: 2rem;
     }
-    
+
     /* Switch to horizontal layout for larger screens */
     .flags {
         flex-direction: row;
         justify-content: center;
         gap: 2.5rem;
     }
-    
+
     .flag-container {
         max-width: 220px;
     }
-    
+
     .flag-label {
         font-size: 1.1rem;
     }
@@ -117,19 +135,19 @@ h1 {
         padding: 2.5rem;
         max-width: 800px;
     }
-    
+
     h1 {
         font-size: 2.25rem;
     }
-    
+
     .flags {
         gap: 4rem;
     }
-    
+
     .flag-container {
         max-width: 250px;
     }
-    
+
     .flag-label {
         font-size: 1.25rem;
         margin-top: 1rem;
