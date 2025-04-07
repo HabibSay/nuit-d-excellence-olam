@@ -35,9 +35,10 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    line-height: 1.5;
+    backdrop-filter: blur(3px);
     margin: 0;
     padding: 0;
+    overflow: hidden;
   }
 
   /* Page wrapper to organize content */
