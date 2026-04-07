@@ -3,24 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programme de la nuit d'Excellence | Olam Agri & Olam</title>
-    <style>
-        * {
-            margin: 0px;
-            padding: 0px;
-            box-sizing: border-box;
-        }
-
-        #myPDF {
-            width: 100%;
-            height: 100vh;
-        }
-    </style>
+    <title>Program — The Night of Excellence</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- <iframe id="myPDF" src="https://drive.google.com/file/d/1k8bx4gmekNiSrHXY2fC6CURbmHlZu3SO/preview" frameborder="0"></iframe> -->
-    <iframe id="myPDF" src="https://simplebooklet.com/programmeen2025" frameborder="0"></iframe>
-    <!-- Email ID : successive.vole.kpyv@letterhaven.net -->
-    <!-- Password : Success@2025 -->
+    <div class="bg-layer"></div>
+
+    <div class="pdf-viewer">
+        <!-- Header -->
+        <header class="viewer-header">
+            <a href="index.html" class="back-btn">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+            </a>
+            <h1 class="viewer-title">Program 2026</h1>
+            <div class="header-spacer"></div>
+        </header>
+
+        <!-- Flipbook -->
+        <div id="flipbook-viewer" class="flipbook-wrapper">
+            <div id="flipbook" class="flipbook"></div>
+        </div>
+
+        <!-- Fallback iframe (shown if flipbook fails) -->
+        <div id="pdf-fallback" class="pdf-container" style="display:none;">
+            <iframe id="pdf-frame" class="pdf-frame" src="" frameborder="0"></iframe>
+        </div>
+
+        <!-- Navigation -->
+        <div class="flipbook-nav" id="flipbook-nav">
+            <button id="prev-btn" class="nav-btn" disabled>
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <span id="page-indicator">Loading...</span>
+            <button id="next-btn" class="nav-btn" disabled>
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+        </div>
+
+        <!-- Loading -->
+        <div id="loading" class="loading-overlay">
+            <div class="spinner"></div>
+            <p>Loading program...</p>
+        </div>
+    </div>
+
+    <!-- PDF.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script>
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+    </script>
+    <!-- StPageFlip -->
+    <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.min.js"></script>
+    <!-- Viewer -->
+    <script>
+        const PDF_CONFIG = {
+            file: './assets/EN - La Nuit de l\'Excellence 2026.pdf',
+            fallback: './assets/EN - La Nuit de l\'Excellence 2026.pdf'
+        };
+    </script>
+    <script src="viewer.js"></script>
 </body>
 </html>
