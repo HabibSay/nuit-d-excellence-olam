@@ -19,16 +19,6 @@
             <div class="header-spacer"></div>
         </header>
 
-        <!-- Flipbook -->
-        <div id="flipbook-viewer" class="flipbook-wrapper">
-            <div id="flipbook" class="flipbook"></div>
-        </div>
-
-        <!-- Fallback iframe (shown if flipbook fails) -->
-        <div id="pdf-fallback" class="pdf-container" style="display:none;">
-            <iframe id="pdf-frame" class="pdf-frame" src="" frameborder="0"></iframe>
-        </div>
-
         <!-- Navigation -->
         <div class="flipbook-nav" id="flipbook-nav">
             <button id="prev-btn" class="nav-btn" disabled>
@@ -38,6 +28,16 @@
             <button id="next-btn" class="nav-btn" disabled>
                 <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
             </button>
+        </div>
+
+        <!-- Flipbook -->
+        <div id="flipbook-viewer" class="flipbook-wrapper">
+            <div id="flipbook" class="flipbook"></div>
+        </div>
+
+        <!-- Fallback iframe (shown if flipbook fails) -->
+        <div id="pdf-fallback" class="pdf-container" style="display:none;">
+            <iframe id="pdf-frame" class="pdf-frame" src="" frameborder="0"></iframe>
         </div>
 
         <!-- Loading -->
